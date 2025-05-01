@@ -13,6 +13,7 @@ pipeline{
 			steps{
 				sh 'cd website'
 				sh 'ls -lrt'
+				sh 'pwd'
 				sh 'docker build . -t webapp/php'
 				sh 'docker run -d -p 80:80 --name mysite webapp/php'
 			     }				
