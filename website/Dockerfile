@@ -1,3 +1,3 @@
 #myfile1234
-FROM devopsedu/webapp
+FROM php:7.4-apache
 COPY . /var/www/html/
