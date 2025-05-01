@@ -7,5 +7,11 @@ steps{
 ansiblePlaybook credentialsId: 'masterjenkins', disableHostKeyChecking: true, installation: 'ansible', inventory: '/var/lib/jenkins/workspace/project2/hosts', playbook: '/var/lib/jenkins/workspace/project2/docker_ansi.yml', vaultTmpPath: ''
 }
 }
+stage("build php") {
+sh 'cd website'
+sh 'docker build . -t webapp/php'
+sh 'docker run -d -p 80:80 --name mysite webapp/php'
+}
+
 }
 }
