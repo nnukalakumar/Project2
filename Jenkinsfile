@@ -17,7 +17,7 @@ pipeline{
 			{
 			
 			steps{
-				git branch: 'main', url: 'https://github.com/nnukalakumar/Project2.git'
+				sh "git branch: 'main', url: 'https://github.com/nnukalakumar/Project2.git'"
 				sh 'cd website'
 				sh 'ls -lart'
 				sh 'pwd'
