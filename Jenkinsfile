@@ -18,14 +18,14 @@ pipeline{
 			
 			steps{
 				git branch: 'main', url: 'https://github.com/nnukalakumar/Project2.git'
-		script {	
+			        dir('website') {
 				sh 'pwd'
 				sh 'cd website'
 				sh 'ls -lart'
 				sh 'pwd'
 				sh 'docker build . -t webapp/php'
 				sh 'docker run -d -p 80:80 --name mysite webapp/php'
-			     }				
+			     			}
 			}
 		}
 }
