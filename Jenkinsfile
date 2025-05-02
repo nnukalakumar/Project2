@@ -15,10 +15,9 @@ pipeline{
 		{
 		agent { label 'worker' }
 			{
+			
 			steps{
-			script{(git branch: 'main', url: 'https://github.com/nnukalakumar/Project2.git')}
-				}
-			steps{
+				git branch: 'main', url: 'https://github.com/nnukalakumar/Project2.git'
 				sh 'cd website'
 				sh 'ls -lart'
 				sh 'pwd'
