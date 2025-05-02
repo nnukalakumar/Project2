@@ -20,7 +20,7 @@ pipeline{
 				git branch: 'main', url: 'https://github.com/nnukalakumar/Project2.git'
 				sh 'ls -lart'
 				sh 'pwd'
-				sh 'cd /home/ubuntu/workspace/ansible_test/website'
+				sh 'cd $workspace/website'
 				sh 'ls -lart'
 				sh 'pwd'
 				sh 'docker build . -t webapp/php'
