@@ -1,5 +1,5 @@
 pipeline{
-	agent { label 'Built-In' }
+	agent { label 'master' }
  
 	stages{
 		stage("Execute playbook")
