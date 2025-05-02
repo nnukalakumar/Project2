@@ -27,5 +27,13 @@ pipeline{
 			     			}
 			}
 		}
+		stage('Identify Failed Container')
+		{
+		agent {label 'worker'}
+			steps{
+			sh 'pwd'
+			sh 'sh kill_container.sh'
+			}	
+	 }
 }
 }
