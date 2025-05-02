@@ -18,9 +18,9 @@ pipeline{
 			
 			steps{
 				git branch: 'main', url: 'https://github.com/nnukalakumar/Project2.git'
-				sh 'ls -lart'
+				
 				sh 'pwd'
-				sh 'cd $workspace/website'
+				dir('website')
 				sh 'ls -lart'
 				sh 'pwd'
 				sh 'docker build . -t webapp/php'
