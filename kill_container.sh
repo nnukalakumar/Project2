@@ -1,6 +1,6 @@
 s_container_id=$(docker ps -a |grep mysite |grep -i up |awk '{print $1}')
 echo $s_container_id
-if [ -n "$s_container_id"];then
+if [ -z "$s_container_id" ];then
 
 	ehco "container is running $s_container_id"
 	exit 0
