@@ -20,7 +20,7 @@ pipeline{
 				git branch: 'main', url: 'https://github.com/nnukalakumar/Project2.git'
 		script {	
 				sh 'pwd'
-				dir('website')
+				sh 'cd website'
 				sh 'ls -lart'
 				sh 'pwd'
 				sh 'docker build . -t webapp/php'
