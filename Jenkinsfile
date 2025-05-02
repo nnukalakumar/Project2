@@ -21,6 +21,8 @@ pipeline{
 				sh 'ls -lart'
 				sh 'pwd'
 				sh 'cd /home/ubuntu/workspace/ansible_test/website'
+				sh 'ls -lart'
+				sh 'pwd'
 				sh 'docker build . -t webapp/php'
 				sh 'docker run -d -p 80:80 --name mysite webapp/php'
 			     }				
